@@ -53,6 +53,9 @@ def main():
             else:
 	    # Print the factors of the number
                 print(f"{num}={factor}*{num // factor}")
+            if time.time()-start_time>5:
+                print("Time limit exceeded")
+                exit()
     # Print an error message if the file is not found
     except FileNotFoundError:
         print(f"File '{file_path}' not found.")
